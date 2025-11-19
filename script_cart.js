@@ -1,7 +1,9 @@
 
-cart = {}
 
 let cartFromStorage = localStorage.getItem('cart');
+
+cart = {}
+
 
 if (cartFromStorage) {
 	cart = JSON.parse(cartFromStorage)

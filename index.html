@@ -26,7 +26,7 @@
 	<header>
 		
 		<div class="container box">
-      <img src="/media/img/crop-tool_6642182.png" alt="logo" width="80px">
+			<a href="index.html"><img src="/media/img/crop-tool_6642182.png" alt="logo" width="80px"></a>
 		<nav>
 			<ul class="menu_list" id="menu_list">
 				<li><a class="menu_link" id="main_menu_link_1" href="/index.html"><p>-> Главная</p></a></li>
@@ -36,13 +36,20 @@
 				<li><a class="menu_link" id="main_menu_link_5" href="/pages/about.html"><p>О нас</p></a></li>
 				<li><a class="menu_link" id="main_menu_link_6" href="/pages/contacte.html"><p>Контакты</p></a></li>
 			</ul>
+			
 		</nav>
 		<form action="" method="get">
 			<input type="search" placeholder="Найти товар" name="search">
 			<button>Найти</button>
 		</form>
+		<div class="shoppingCart">
+			<img class="shoppingCartImg" src="media/img/cart_13380091.png" alt="shoppingCartImg">
+		
+			<div class="cartContent"></div>
 		</div>
-		<hr>
+		<!-- </nav> -->
+		</div>
+
 	</header>
 
 <main>
@@ -96,20 +103,26 @@
 		<h2 id="title_shop"><p>Наши работы:</p></h2>
 		<p id="ex_paragraph">Товары, находящиеся в данный момент в шоу-руме</p>
 		<div class="cards">
-			<!-- <div class="cards_mix"> -->
+			<div class="card">
+
+				<h3><p>Металлические качели</p></h3>
+				<img id="img_swing" class="img_card" src="/media/img/изображение_viber_2025-09-25_14-19-50-995.jpg" alt="Металлические качели">
+				<h5 class="price_product">10 999 MDL</h5>
+				<button class="buy_button">заказать</button>
+			</div>
+
+         <button id="change_img_btn" onclick="changeImage()">Change image</button>
+
+
+			<div class="cards_mix">
             <!-- <div class="card" id="main_card">
 				<h3><p>Металлические ворота</p></h3>
 				<img id="img_gates" class="img_card"  src="/media/img/изображение_viber_2025-09-25_14-19-51-164.jpg" alt="Металлические ворота">
 				<h5 class="price_product">16 999 MDL</h5>
 				<button class="buy_button">заказать</button>
 			</div> -->
-		<!--	<div class="card">
-				<h3><p>Металлические качели</p></h3>
-				<img id="img_swing" class="img_card" src="/media/img/изображение_viber_2025-09-25_14-19-50-995.jpg" alt="Металлические качели">
-				<h5 class="price_product">10 999 MDL</h5>
-				<button class="buy_button">заказать</button>
-			</div>
-			<div class="card">
+		
+			<!--	<div class="card">
 				<h3><p>Металлическая лавка</p></h3>
 				<img class="img_card" src="/media/img/изображение_viber_2025-09-25_14-19-51-025.jpg" alt="Металлическая лавка">
 				<h5 class="price_product">5 999 MDL</h5>
@@ -122,9 +135,8 @@
 				<button class="buy_button">заказать</button>
 			</div> -->
 
-         <!-- <button id="change_img_btn" onclick="changeImage()">Change image</button> -->
 
-			<!-- <div class="cards_barbeq">
+			<div class="cards_barbeq">
          <article class="card">
 				<h3><p>Металлический барбекю</p></h3>
 				<div class="img_container">
@@ -149,33 +161,40 @@
 				<h5 class="price_product">10 990 MDL</h5>
 				<button class="buy_button">заказать</button>
 			</article>
-			</div> -->
+			</div>
 			</div>
 
 <section>
 		<ul class="productList">
-		<li><p>barbequ <button onclick="addProduct('barbequ', 12990)">Добавить в корзину</button></p></li>
-		<li><p>Ворота <button onclick="addProduct('poarta', 16999)">Добавить в корзину</button></p></li>
-		<li><p>Лавка <button onclick="addProduct('scaun', 5999)">Добавить в корзину</button></p></li>
+		<li><p>Барбекю <button onclick="addProduct('barbequ', 12990)">Добавить в корзину</button></p></li>
+		<li><p>Металлические ворота <button onclick="addProduct('gates', 16999)">Добавить в корзину</button></p></li>
+		<li><p>Металлическая лавка <button onclick="addProduct('bench', 5999)">Добавить в корзину</button></p></li>
+		<li><p>Металлическая лавка с кофе-подставкой<button onclick="addProduct('bench-cofe', 6990)">Добавить в корзину</button></p></li>
+		<li><p>Металлические качели <button onclick="addProduct('swing', 10999)">Добавить в корзину</button></p></li>
+		<li><p>Металлический стеллаж <button onclick="addProduct('rack', 8999)">Добавить в корзину</button></p></li>
+		<li><p>Металлический барбекю на колёсах <button onclick="addProduct('barbequ-wheels', 12990)">Добавить в корзину</button></p></li>
+		<li><p>Металлический барбекю с инициалами <button onclick="addProduct('barbequ-initial', 8990)">Добавить в корзину</button></p></li>
+		<li><p>Металлический барбекю в стиле лофт <button onclick="addProduct('barbequ-loft', 10990)">Добавить в корзину</button></p></li>
 	</ul>
-	
-	<hr>
+<hr>
 
 	<h1>Shopping cart:</h1>
 
-	<ul class="shoppingCart"></ul>
+	<ul class="shoppingCart">
 
+	</ul>
 	<h3 class="price">Итоговая сумма:</h3>
-
-	<hr>
+<hr>
 
 	<button onclick="resetCart()">Очистить корзину</button>
 </section>
 
-<section class="contain"></section>
-
 </div>
-</section> 
+</section>
+
+<section class="contain">
+
+</section>
 
 <section> 
 		<h2><p>Как мы работаем</p></h2>
@@ -217,6 +236,9 @@
 <h2><p>Узнавайте первыми последние новости и предложения!</p></h2>
 <div class="content_footer">
 <div class="links_footer">
+
+	<a href="index.html"><img src="/media/img/crop-tool_6642182.png" alt="logo" width="80px"></a>
+
    <a href="tel:069569286"><p>Звоните по номеру 069569286</p></a>
 	<br>
    <a href="mailto:stefoglolia9@gmail.com"><p>Пишите по адресу stefoglolia9@gmail.com</p></a>
@@ -242,11 +264,11 @@
 	</div>
 </footer>
 
-<div class="back_to_top"><a href="index.html"></a></div>
+<div class="back_to_top"><a href="/index.html"></a></div>
 
 </body>
 </html>
 
-<script src="/script.js"></script>
-<script src="/script_cart.js"></script>
+<script src="./script.js"></script>
+<!-- <script src="/script_cart.js"></script> -->
 
