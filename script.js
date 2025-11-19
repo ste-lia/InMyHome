@@ -1,4 +1,8 @@
 
+import math from './math.mjs'
+
+console.log(math.ariecerc(3));
+
 
 let dark_mode_btn = document.querySelector('#dark_mode_btn');
 
