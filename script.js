@@ -417,6 +417,68 @@ form_contact.addEventListener('submit', (event) => {
 });
 
 
-
 // shopping Cart Functionality
 
+// ----------------------------------------------
+// request
+// 100- info
+// 400- er client
+// 500- er serv
+// -------------------
+// Single-threaded
+console.log('Inainte de setTimeout')
+
+// setTimeout(function() {
+// 	console.log('Timeout message')
+// }, 5000)
+
+console.log('Dupa setTimeout')
+
+// callback
+
+function loadPage() {
+
+}
+
+window.addEventListener('scroll', loadPage)
+
+// ----------------------------------------------
+// promis
+// fetch -  GET
+fetch('https://jsonplaceholder.typicode.com/users')
+   .then(raspunsul => raspunsul.json())
+   .then(utilizatori => console.log(utilizatori))
+   .catch(eroare => console.log(eroare))
+   .finally()
+
+// Async/ Await
+	async function loadUsers() {
+   try {
+      let raspuns = await fetch('https://jsonplaceholder.typicode.com/users')
+      let utilizatori = await raspuns.json()
+      console.log(utilizatori)
+   } catch(eroare) {
+      console.error(eroare)
+   } finally {
+
+   }
+   
+}
+
+loadUsers()
+// -----------------------------------------------------
+
+// feth - POST
+
+fetch('adresa unde dorim sa incarcam datele', {
+
+   method: "POST",
+	
+   headers: {
+      'Content-Type': "application/json"
+   },
+      body: JSON.stringify({
+      name:'LiaDontUnderstand',
+      lectie:22,
+   })
+})
